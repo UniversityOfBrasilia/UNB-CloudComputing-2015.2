@@ -1,0 +1,9 @@
+\chapter[Implementação]{Implementação}\label{cap1}
+
+Como já foi citado anteriormente, para testar a solução proposta foram realizados três experimentos pelos autores da proposta, o primeiro foi uma nuvem privada e elasticidade vertical, o segundo experimento foi uma nuvem privada com elasticidade horizontal e o terceiro, uma nuvem híbrida e elasticidade horizontal.
+
+No trabalho prático proposto na disciplina de Computação em Nuvem, teria que ser implementada a solução proposta no artigo escolhido pela dupla, para a comparação de resultados, sendo que as ferramentas utilizadas foram diferentes. Porém foram encontradas muitas dificuldades pela dupla para que essa tarefa fosse realizada. Uma delas foi a instalação do OpenStack utilizando uma máquina virtual.  São muitos erros encontrados, mesmo seguindo um tutorial, e a maioria ocorre por causa da utilização de  Virtual Machines ao invés de uma infraestrutura real física. Outros problemas vinham da Instalação de ambiente, configuração de outras ferramentas necessárias, como MAAS e juju que varia muita de acordo com as versões gerando uma documentação complexa.
+
+Na implementaçãoo a instalaçãoo do ambiente foi concluída com sucesso. Foram configuradas três máquinas virtuais. Uma que é o servidor do openstack e outros dois nós que são instanciados e tem seus recursos alocados dinamicamente. O problema consistiu na hora de consumir os recursos dos nós subsequentes, o gerenciador encontra os nós, instala o serviço nos mesmos, mas na hora de fazer o comissionamento do serviço ocorrem erros, como ilustrado no log abaixo:[imagem]
+
+Foram seguidos até outros tutoriais, como o que instala o Openstack pelo devstack, que é uma produção da comunidade OpenStack,  onde a instalação é mais rápida, porém a dificuldade em acrescentar e manipular os nós e mexer com a ferramenta, são bem parecidos com o quê foi seguido no outro tutorial, que utiliza o Canonical’s OpenStack Autopilot, do Ubuntu.
